@@ -10,12 +10,12 @@ services:
     build: .
     restart: "unless-stopped"
     shm_size: "2gb"
-    volumes:
-      - test_firefox:/home/neko/.mozilla/firefox/profile.default
+    #volumes:
+      #- test_firefox:/home/neko/.mozilla/firefox/profile.default
     #   - test_tor:/home/neko/app/tor-browser/Browser/TorBrowser/Data/Browser/profile.default
     ports:
       - "18080:8080"
-      - "28881:28881/tcp"
+      - "28881:28881"
     environment:
       NEKO_SCREEN: '1360x768@60'
       NEKO_PASSWORD: userpw
