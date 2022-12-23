@@ -1,0 +1,20 @@
+version: "3.4"
+services:
+  neko:
+    #image: "m1k1o/neko:xfce"
+    build: .
+    restart: "unless-stopped"
+    shm_size: "2gb"
+    ports:
+      - "18080:8080"
+      - "28881:28881/tcp"
+    environment:
+      NEKO_SCREEN: '1360x768@60'
+      NEKO_PASSWORD: userpw
+      NEKO_PASSWORD_ADMIN: adminpw
+      #NEKO_EPR: 52000-52100
+      NEKO_TCPMUX: 28881
+      NEKO_UDPMUX: 28881
+      NEKO_ICELITE: 1
+
+
