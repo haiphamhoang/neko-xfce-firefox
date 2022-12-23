@@ -1,10 +1,18 @@
 version: "3.4"
+
+volumes:
+  test_firefox:
+  test_tor:
+
 services:
   neko:
     #image: "m1k1o/neko:xfce"
     build: .
     restart: "unless-stopped"
     shm_size: "2gb"
+    volumes:
+      - test_firefox:/home/neko/.mozilla/firefox/profile.default
+    #   - test_tor:/home/neko/app/tor-browser/Browser/TorBrowser/Data/Browser/profile.default
     ports:
       - "18080:8080"
       - "28881:28881/tcp"
