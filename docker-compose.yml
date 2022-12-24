@@ -6,13 +6,13 @@ volumes:
 
 services:
   neko:
-    #image: "m1k1o/neko:xfce"
-    build: .
-    restart: "unless-stopped"
+    image: "ghcr.io/haiphamhoang/neko-xfce-firefox:master"
+    # build: .
+    # restart: "unless-stopped"
     shm_size: "2gb"
-    #volumes:
-      #- test_firefox:/home/neko/.mozilla/firefox/profile.default
-    #   - test_tor:/home/neko/app/tor-browser/Browser/TorBrowser/Data/Browser/profile.default
+    volumes:
+    - test_firefox:/home/neko/.mozilla/firefox/profile.default
+    - test_tor:/home/neko/app/tor-browser/Browser/TorBrowser/Data/Browser/profile.default
     ports:
       - "18080:8080"
       - "28881:28881"

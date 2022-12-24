@@ -1,5 +1,10 @@
 # neko-xfce-firefox
 
+## Install
+- firefox-esr
+- tor-browser
+- gvim editor
+
 ## Persistance Data
 
 - Firefox: `/home/neko/.mozilla/firefox/profile.default`
