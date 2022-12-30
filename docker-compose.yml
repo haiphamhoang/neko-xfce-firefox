@@ -6,9 +6,9 @@ volumes:
 
 services:
   neko:
-    image: "ghcr.io/haiphamhoang/neko-xfce-firefox:master"
-    # build: .
-    # restart: "unless-stopped"
+    image: "neko-xfce-firefox:master"
+    build: .
+    restart: "unless-stopped"
     shm_size: "2gb"
     volumes:
     - test_firefox:/home/neko/.mozilla/firefox/profile.default
