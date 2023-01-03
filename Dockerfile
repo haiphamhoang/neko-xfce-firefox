@@ -14,10 +14,6 @@ RUN apt update -y && apt install -y --no-install-recommends curl xz-utils firefo
 
     # create firefox profile directory
     mkdir -p /home/neko/.mozilla/firefox/profile.default; \
-    chown -R neko:neko /home/neko/.mozilla; \
-    
-    # clean up
-    apt-get clean -y; \
-    rm -rf /var/cache/apt/*;
+    chown -R neko:neko /home/neko/.mozilla
 
 COPY --chown=neko firefox/profiles.ini /home/neko/.mozilla/firefox/profiles.ini
